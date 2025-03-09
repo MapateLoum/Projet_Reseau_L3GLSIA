@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["document"])) {
     }
 
     $file = $_FILES["document"]["tmp_name"];
-    $destination = "/documents/" . $_FILES["document"]["name"];
+    $destination = "/home/mapate/Documents/" . $_FILES["document"]["name"];
 
     if (ftp_put($conn_id, $destination, $file, FTP_BINARY)) {
         echo "<p>Fichier envoyé avec succès !</p>";
